@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-ink: #13233a;
+  --color-ink-2: #1c3150;
+  --color-mist: #eef2f5;
+  --color-signal: #e8a33d;
+  --color-signal-dark: #c9851f;
+  --color-flow: #5fa3c0;
+  --color-slate: #5b6b7f;
+  --font-display: var(--font-bricolage);
+  --font-sans: var(--font-public-sans);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #ffffff;
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-signal);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Pipeline: pontos de dados percorrendo o fluxo uma vez no carregamento, depois em loop suave */
+@keyframes flow {
+  from {
+    stroke-dashoffset: 120;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.pipe-flow {
+  stroke-dasharray: 4 16;
+  animation: flow 2.4s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .pipe-flow {
+    animation: none;
+  }
+}
