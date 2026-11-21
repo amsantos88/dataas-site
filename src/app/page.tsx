@@ -212,7 +212,12 @@ export default function Home() {
       <footer className="bg-ink border-t border-white/10 text-sm text-[#8fa6be]">
         <div className="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-8 pb-24 sm:flex-row sm:justify-between sm:pb-8 sm:pr-24">
           <span>© 2026 Data AS. Consultoria de dados.</span>
-          <a href={EMAIL_URL} className="hover:text-white">{EMAIL}</a>
+          <div className="flex flex-wrap gap-x-6 gap-y-2">
+            <a href="/privacidade" className="hover:text-white">Política de Privacidade</a>
+            <a href="/termos" className="hover:text-white">Termos de Serviço</a>
+            <a href="/exclusao-de-dados" className="hover:text-white">Exclusão de dados</a>
+            <a href={EMAIL_URL} className="hover:text-white">{EMAIL}</a>
+          </div>
         </div>
       </footer>
 

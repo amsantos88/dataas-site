@@ -27,6 +27,36 @@ body {
   border-radius: 4px;
 }
 
+/* Páginas legais */
+.legal h2 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 2.75rem;
+  line-height: 1.25;
+}
+.legal h3 {
+  font-weight: 700;
+  margin-top: 1.5rem;
+}
+.legal p,
+.legal ul {
+  margin-top: 1rem;
+  line-height: 1.75;
+  color: #2e3d52;
+}
+.legal ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+.legal li + li {
+  margin-top: 0.4rem;
+}
+.legal a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 /* Pipeline: pontos de dados percorrendo o fluxo uma vez no carregamento, depois em loop suave */
 @keyframes flow {
   from {
