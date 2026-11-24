@@ -1,6 +1,7 @@
 import Pipeline from "@/components/Pipeline";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { EMAIL, EMAIL_URL, WHATSAPP_EXIBICAO, WHATSAPP_URL } from "@/lib/contato";
+import { EMPRESA } from "@/lib/empresa";
 
 const problemas = [
   "Relatórios montados à mão, toda semana, em planilhas que só uma pessoa entende.",
@@ -210,8 +211,12 @@ export default function Home() {
       </main>
 
       <footer className="bg-ink border-t border-white/10 text-sm text-[#8fa6be]">
-        <div className="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-8 pb-24 sm:flex-row sm:justify-between sm:pb-8 sm:pr-24">
-          <span>© 2026 Data AS. Consultoria de dados.</span>
+        <div className="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-8 pb-24 lg:flex-row lg:justify-between lg:pb-8 lg:pr-24">
+          <div className="space-y-1">
+            <p>© 2026 Data AS. Consultoria de dados.</p>
+            <p>{EMPRESA.razaoSocial}</p>
+            <p>CNPJ {EMPRESA.cnpj}</p>
+          </div>
           <div className="flex flex-wrap gap-x-6 gap-y-2">
             <a href="/privacidade" className="hover:text-white">Política de Privacidade</a>
             <a href="/termos" className="hover:text-white">Termos de Serviço</a>

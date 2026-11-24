@@ -27,6 +27,9 @@ export default function LegalPage({ titulo, children }: { titulo: string; childr
           <Link className="hover:text-ink" href="/privacidade">Política de Privacidade</Link>
           <Link className="hover:text-ink" href="/termos">Termos de Serviço</Link>
           <Link className="hover:text-ink" href="/exclusao-de-dados">Exclusão de dados</Link>
+          <p className="w-full">
+            {EMPRESA.razaoSocial} · CNPJ {EMPRESA.cnpj}
+          </p>
         </div>
       </footer>
     </>
